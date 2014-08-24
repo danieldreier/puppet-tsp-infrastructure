@@ -5,7 +5,7 @@
 # the key, the variables inside of each item in the array are interpreted and
 # do not yield the results that we need.
 #
-class site::profile::puppet::common::master::hiera {
+class site::profile::puppet::master::hiera {
 
   $hierarchy = [
     'vagrant/%{is_vagrant}',

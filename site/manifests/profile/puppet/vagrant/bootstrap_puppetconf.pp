@@ -3,9 +3,9 @@
 # Configures modulepath so that we can do a real puppet run without an awkward --modulepath paramater that hiera knows anyway
 #
 class site::profile::puppet::vagrant::bootstrap_puppetconf {
-  $ca         = hiera('ca', $::fqdn)
-  $manifest   = hiera('manifest', '/vagrant_src/projects/infrastructure/site.pp')
-  $modulepath = hiera('modulepath', ['/vagrant_src/projects/infrastructure','/vagrant_src/modules'])
+  $ca         = hiera('ca')
+  $manifest   = hiera('manifest')
+  $modulepath = hiera('modulepath')
   $parser     = hiera('parser', 'future')
 
   Ini_setting {

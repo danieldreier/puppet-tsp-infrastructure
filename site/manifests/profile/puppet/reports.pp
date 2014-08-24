@@ -4,14 +4,11 @@
 #
 class profile::puppet::common::reports {
 
-  include profile::puppet::common::reports::hipchat
-
   $reports = [
     'puppetdb',
-    'hipchat',
   ]
 
-  ini_setting { 'pe_reports':
+  ini_setting { 'reports':
     ensure  => present,
     setting => 'reports',
     value   => join($reports,','),
