@@ -1,0 +1,18 @@
+---
+# Puppet master setup
+puppet::server::storeconfigs: 'puppetdb'
+puppet::server::reporturl: 'https://master-vagrant.cloud.puppetlabs.net/report/upload'
+puppet::storeconfig::puppetdb::server: 'master-vagrant.cloud.puppetlabs.net'
+puppet::agent::server: 'master-vagrant.cloud.puppetlabs.net'
+puppet::agent::ca_server: 'master-vagrant.cloud.puppetlabs.net'
+mco_middleware_host: 'master-vagrant.cloud.puppetlabs.net'
+puppetmaster:        'master-vagrant.cloud.puppetlabs.net'
+puppetca:            'master-vagrant.cloud.puppetlabs.net'
+repo::master:         'master-vagrant.cloud.puppetlabs.net'
+caserver: 'master-vagrant.cloud.puppetlabs.net'
+server: 'master-vagrant.cloud.puppetlabs.net'
+manifest: '/vagrant_src/projects/infrastructure/site.pp'
+modulepath:
+  - '/vagrant_src/projects/infrastructure/modules'
+  - '/vagrant_src/modules'
+

@@ -1,0 +1,12 @@
+---
+classes:
+  - site::profile::puppet::vagrant::master
+caserver: 'master-vagrant.cloud.puppetlabs.net'
+server: 'master-vagrant.cloud.puppetlabs.net'
+ca: 'true'
+manifest: '/vagrant_src/projects/infrastructure/site.pp'
+modulepath:
+  - '/vagrant_src/secure'
+  - '/opt/puppet/share/puppet/modules'
+  - '/vagrant_src/modules'
+  - '/vagrant_src/projects/infrastructure/modules'

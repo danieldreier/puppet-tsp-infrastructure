@@ -4,7 +4,7 @@
 # allows facts to be used in a puppet apply
 #
 class site::profile::puppet::facter (
-  $facterlib = hiera('facterlib', '/vagrant_src/projects/infrastructure/site/puppetlabs/lib/facter/')
+  $facterlib = hiera('facterlib', '/vagrant_src/projects/infrastructure/modules/site/lib/facter/')
   ){
   augeas { 'puppet_init_config':
     lens    => 'Shellvars.lns',
